@@ -78,11 +78,12 @@ img {
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+  text-decoration: none;
 }
 .section-title::after {
   position: absolute;
   content: "";
-  width: 64px;
+  width: 0px;
   height: 0.18rem;
   left: 0;
   right: 0;
@@ -183,12 +184,13 @@ img {
   position: relative;
   row-gap: 5rem;
   padding: 4rem 0 5rem;
+  background-color: white;
 }
 .home__data {
   align-self: center;
 }
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: 40px;
   margin-bottom: var(--mb-5);
 }
 .home__title-color {
@@ -217,7 +219,7 @@ img {
   fill: var(--first-color);
 }
 .home__blob-img {
-  width: 360px;
+  width: 300px;
 }
 
 /*BUTTONS*/
@@ -252,34 +254,46 @@ img {
 
 /* ===== SKILLS =====*/
 .skills__container {
-  row-gap: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  background-color: #16a085;
+  padding:20px;
+  border-radius:10px;
 }
 .skills__subtitle {
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 .skills__text {
   margin-bottom: var(--mb-4);
 }
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
 .skills__data {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  font-weight: var(--font-semi);
+  text-align: center;
+  background: #f7f7f7;
+  border-radius: 8px;
   padding: 0.5rem 1rem;
-  margin-bottom: var(--mb-4);
-  border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  margin-bottom: 0.5rem;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 .skills__icon {
   font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
+  margin-right: 0.5rem;
+  color: #007bff;
+  margin-top:5px;
 }
-.skills__names {
-  display: flex;
-  align-items: center;
+.skills__name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
 }
 .skills__bar {
   position: absolute;
@@ -482,5 +496,152 @@ img {
   }
   .home__img {
     width: 450px;
+  }
+}
+
+/*===== PROJECTS =====*/
+
+
+.projects.section {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.projects__instruction {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-left:4%;
+}
+
+
+.projects__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.projects__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.projects__img:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.project-title {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+.project-desc {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.project-skills {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Highlighted Text Styles */
+.highlight-role {
+  color: #007bff;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.highlight-grad {
+  color: #e67e22;
+  font-weight: bold;
+}
+.highlight-college {
+  color: #16a085;
+  font-style: italic;
+}
+.highlight-skills {
+  color: #8e44ad;
+  font-weight: 600;
+}
+.highlight-project {
+  color: #c0392b;
+  font-weight: 600;
+}
+.highlight-soft {
+  color: #27ae60;
+  font-style: italic;
+}
+
+.home.bd-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.home__data {
+  flex: 1 1 300px;
+  min-width: 250px;
+  z-index: 2;
+}
+
+.home__img {
+  flex: 1 1 300px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .home.bd-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .home__img, .home__data {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
   }
 }
